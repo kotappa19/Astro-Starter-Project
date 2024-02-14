@@ -1,10 +1,37 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Greeting from '../components/Greeting';
+import HomePage from '../components/HomePage.astro';
+import PricingComponent from '../components/PricingComponent.astro';
+import AboutComponent from '../components/AboutComponent.astro';
+import ContactComponent from '../components/ContactComponent.astro';
+import PrivacyComponent from '../components/PrivacyComponent.astro';
+import TermsComponent from '../components/TermsComponent.astro';
+import FaqComponent from '../components/FaqComponent.astro';
 
 const pageTitle = 'Home Page';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <Greeting client:load messages={["Hii", "Hallo", "Hola", "Habari"]} />
+    
+      <!-- Home Page Content -->
+      <HomePage />
+
+      <!-- pricing page -->
+      <PricingComponent />
+
+      <!-- privacy page -->
+      <PrivacyComponent />
+
+      <!-- terms page -->
+      <TermsComponent />
+
+      <!-- about us page -->
+      <AboutComponent />
+
+      <!-- faqs page -->
+      <FaqComponent />
+
+      <!-- contact us page -->
+      <ContactComponent />
+        
 </BaseLayout>

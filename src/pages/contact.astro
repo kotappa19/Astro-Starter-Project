@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactComponent from "../components/ContactComponent.astro";
+import PricingComponent from "../components/PricingComponent.astro";
+import AboutComponent from "../components/AboutComponent.astro";
+import TermsComponent from "../components/TermsComponent.astro";
+import PrivacyComponent from "../components/PrivacyComponent.astro";
+import FaqComponent from "../components/FaqComponent.astro";
+
+const pageTitle = "Contact Us";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <ContactComponent />
+  <AboutComponent />
+  <TermsComponent />
+  <PricingComponent />
+  <PrivacyComponent />
+  <FaqComponent />
+</BaseLayout>

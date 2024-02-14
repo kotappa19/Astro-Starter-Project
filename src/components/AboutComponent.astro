@@ -1,0 +1,54 @@
+---
+const identity = {
+  firstName: "Kotappa",
+  country: "India",
+  occupation: "Software Engineer",
+  hobbies: ["photography", "coding", "cricket"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "SvelteKit"];
+
+const happy = true;
+const finished = true;
+const goal = 3;
+---
+<section class="bg-sky-50 dark:bg-gray-900" id="about">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">About Us</h2>
+            <div>
+                <p>Here are a few facts about me:</p>
+                <ul>
+                  <li>My name is {identity.firstName}.</li>
+                  <li>
+                    I live in {identity.country} and I work as a {identity.occupation}.
+                  </li>
+                  {
+                    identity.hobbies.length >= 2 && (
+                      <li>
+                        Two of my hobbies are: {identity.hobbies[0]} and{" "}
+                        {identity.hobbies[1]}
+                      </li>
+                    )
+                  }
+                </ul>
+                <p>My skills are:</p>
+                <ul>
+                  {skills.map((skill) => <li class="text-blue-700 font-bold">{skill}</li>)}
+                </ul>
+            
+                {happy && <p>I am happy to be learning Astro!</p>}
+            
+                {finished && <p>I finished this tutorial!</p>}
+            
+                {
+                  goal === 3 ? (
+                    <p>My goal is to finish in 3 days.</p>
+                  ) : (
+                    <p>My goal is not 3 days.</p>
+                  )
+                }
+            </div>
+        </div>
+    </div>
+</section>
